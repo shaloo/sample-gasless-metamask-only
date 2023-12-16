@@ -13,6 +13,9 @@
     "serve": "^11.2.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.2.0"
+  },
+  "dependencies": {
+    "@arcana/scw": "^0.0.22"
   }
 }
 

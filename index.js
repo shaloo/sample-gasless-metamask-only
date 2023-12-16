@@ -1,7 +1,8 @@
-//import { arcana } from "https://unpkg.com/@arcana/scw@0.0.22/dist/standalone/scw.umd.js";
-//import { myscw } from "@arcana/scw";
+//import { scw } from "@arcana/scw@0.0.22";
+//import { scw } from "https\://unpkg.com/@arcana/scw@0.0.22/dist/standalone/scw.umd.js";
+//import { myscw } from "@arcana/scw@0.0.22";
 
-import { erc20abi } from "./erc20.js";
+import { myerc20abi } from "./myerc20.js";
 
 const clientId = "xar_dev_56c6d7f95838926fc7a609e1003bcf31a0b17d51";
 
@@ -12,6 +13,7 @@ console.log("EOA: ", await signer.getAddress());
 
 //use import statement - not working
 //const appSCW = new myscw.SCW();
+//const appSCW = arcana.scw.SCW();
 
 //use scw.umd.js file to instantiate SCW object
 const appSCW = new arcana.scw.SCW();
@@ -46,16 +48,16 @@ async function gaslessTx() {
     let amount = ethers.utils.parseUnits("0", 2);
 
     // Specify the smart contract address as configured via the dashboard
-    const erc20Address = "0xd513E4537510C75E24f941f159B7CAFA74E7B3B9";
+    const erc20Address = "0x06F51271DCe73e3Fb09637e77Bfb0e996DAb39cf";
 
     const toAddress = "0xD12E6864A0f0f3Ea886400Ae7570E4341889bDa9";
-    const Erc20Interface = new ethers.utils.Interface(erc20abi);
+    const Erc20Interface = new ethers.utils.Interface(myerc20abi);
 
     // Encode an ERC-20 token transfer to recipientAddress of the specified amount
 
-    // Note: the 'approve' operation  of the smart contract used below
+    // Note: the 'transfer' operation  of the smart contract used below
     // must be whitelisted earlier via the dashboard for gasless transaction
-    const encodedData = Erc20Interface.encodeFunctionData("approve", [
+    const encodedData = Erc20Interface.encodeFunctionData("transfer", [
       toAddress,
       amount,
     ]);
