@@ -4,7 +4,8 @@
 
 import { myerc20abi } from "./myerc20.js";
 
-const clientId = "xar_dev_56c6d7f95838926fc7a609e1003bcf31a0b17d51";
+//const clientId = "xar_dev_56c6d7f95838926fc7a609e1003bcf31a0b17d51";
+const clientId = "xar_dev_1ce3de98ebac47e4196a1380b61422dcf63a9c7b";
 
 await window.ethereum.enable();
 const provider = new ethers.providers.Web3Provider(window.ethereum);
