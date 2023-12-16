@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"
+      integrity="sha512-FDcVY+g7vc5CXANbrTSg1K5qLyriCsGDYCE02Li1tXEYdNQPvLPHNE+rT2Mjei8N7fZbe0WLhw27j2SrGRpdMg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@arcana/scw@0.0.22/dist/standalone/scw.umd.js"
+    ></script>
+    <script type="module" src="./index.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <h1>Sample: Gasless Transactions with Metamask!</h1>
+    <div>
+      <div class="title_style">
+        <p style="padding: 1rem">
+          This example demonstrates how a simple HTML/CSS/JS Web3 app can
+          integrate with Arcana Gasless (Standalone) SDK to enable gasless
+          transactions through MetaMask wallet.
+          <a
+            href="https://parceljs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Parcel.</a
+          >
+        </p>
+        <div class="admonition">
+          <strong>Use model:</strong>
+          <br /><br />Log into MetaMask wallet first and then click init,
+          getSCWAddress.
+        </div>
+      </div>
+    </div>
+
+    <div class="function_container">
+      <div class="functions">
+        <button id="Btn-Init-Auth">Init</button>
+      </div>
+      <div class="functions">
+        <button id="Btn-Get-SCW-Address">Get SCW Address</button>
+      </div>
+      <div class="functions">
+        <button id="Btn-Do-Gasless-Tx">Do Gasless Tx</button>
+      </div>
+    </div>
+    <div class="result_style" id="result-container">
+      <strong>Result: </strong><span id="result"></span>
+    </div>
+  </body>
+</html>
+
